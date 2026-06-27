@@ -49,6 +49,16 @@ Every run produces an interactive, self-contained HTML report: each step, the co
 <img src="docs/report.png" alt="Quorum HTML session report" width="820" />
 </div>
 
+## Live overlay
+
+Watch the council work. [`docs/overlay.html`](docs/overlay.html) is a self-contained replay monitor: agent steps stream onto a timeline one by one, each with every member's per-dimension verdict, the aggregate decision, and the confidence behind it. Clone the repo and open the file directly in a browser: no server, no build, no network.
+
+<div align="center">
+<img src="docs/overlay.png" alt="Quorum live overlay replaying a council session" width="820" />
+</div>
+
+It plays a sample session on load, with play, pause, step, restart, and 1x / 2x / 4x speed. Drop a real run onto the page to replay it instead: the overlay reads the exact JSON the reporter emits, so `quorum review <transcript> --json > session.json` and then drag `session.json` onto the page (or paste it in).
+
 ## Why a council
 
 One judge has blind spots. Quorum runs several critics, each with a single lens, and aggregates their votes:
