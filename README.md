@@ -111,7 +111,7 @@ The free heuristic judge is rule-based: it reliably catches explicit drift marke
 
 - Streaming/real-time mode and adapters for popular agent frameworks.
 - A richer LLM member set (consistency, loop detection, cost).
-- Pairs with [claimproof](https://github.com/rxNxkolai/claimproof): the council supervises the agent, claimproof verifies the final answer.
+- Pairs with [veritas](https://github.com/rxNxkolai/veritas): the council supervises the agent, veritas verifies the final answer.
 
 ## Development
 
