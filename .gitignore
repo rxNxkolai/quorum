@@ -1,0 +1,19 @@
+node_modules/
+dist/
+coverage/
+*.log
+npm-debug.log*
+.DS_Store
+.env
+.env.*
+*.tsbuildinfo
+.vitest/
+
+# generated reports
+quorum-report.html
+report.html
+
+# editor/agent tooling caches
+.impeccable/
+.claude/
+.codex/

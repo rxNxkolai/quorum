@@ -1,0 +1,72 @@
+{
+  "name": "quorum",
+  "version": "0.1.0",
+  "description": "A council of critic-judges that supervises any AI agent loop in real time: keeps it on task, catches hallucinations, and escalates to a human when they disagree. Framework-agnostic, runs free and offline by default. Zero runtime dependencies.",
+  "keywords": [
+    "ai",
+    "agent",
+    "agents",
+    "guardrails",
+    "oversight",
+    "supervisor",
+    "hallucination",
+    "llm",
+    "critic",
+    "judge",
+    "council",
+    "ai-safety",
+    "runtime",
+    "devtools"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "quorum": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "prepare": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "selfcheck": "node dist/cli.js review examples/transcript.json",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "author": "Nikolai",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rxNxkolai/quorum.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rxNxkolai/quorum/issues"
+  },
+  "homepage": "https://github.com/rxNxkolai/quorum#readme",
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@vitest/coverage-v8": "^2.1.8",
+    "prettier": "^3.4.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
